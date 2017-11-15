@@ -6,15 +6,16 @@
 ## Jest basics
 * `expect().[comparatorMethod]`
 * Putting it together with enzyme; see `basic.test.js`
-* DRY: `setup()`
 
 ## Testing props with StyledComponents
 * `renderedComponent.props()`
 * `renderedComponent.find()`
-
-
-## Testing Arrays/Lists
+* DRY: `setup()`
 
 ## Testing Objects/Maps
+
+## Testing event handlers
+
+## Testing Lifecycle events
 
 ## Testing HOCs

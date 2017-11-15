@@ -7,7 +7,7 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "jest --setupTestFrameworkScriptFile='<rootDir>/setupTests.js'",
+    "test": "jest --setupTestFrameworkScriptFile='<rootDir>/setupTests.js'"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "styled-components": "^2.2.3"
   }
 }
