@@ -18,7 +18,7 @@ describe('ButtonComponent', () => {
   it('triggers `props.onButtonClick` when TypicalButton is clicked', () => {
     const onClickSpy = jest.fn();
     const renderedComponent = setup({onButtonClick: onClickSpy});
-    renderedComponent.simulate('click');
+    renderedComponent.simulate('click'); // simulate a click event
     expect(onClickSpy).toHaveBeenCalledTimes(1);
   })
 })
@@ -42,6 +42,7 @@ describe('ComponentWithCustomClickHandler', () => {
 
   it('triggers `customOnClickHandler` when TypicalButton is clicked', () => {
     const renderedComponent = shallow(<ComponentWithCustomClickHandler />)
+    // Since we're calling event methods, we need to pass a "fake" event object
     const mockEvent = {preventDefault: () => {}, stopPropagation: () => {}}
     renderedComponent.simulate('click', mockEvent);
     expect(renderedComponent.instance().customOnClickHandler).toHaveBeenCalledTimes(1);

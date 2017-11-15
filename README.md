@@ -13,7 +13,10 @@
 * DRY: `setup()`
 
 ## Testing event handlers
+* `events.test.js`
 
-## Testing Lifecycle events
+## Mocking modules
+`mocking.test.js`
+## Mounting / Testing Lifecycle events
 
-## Testing HOCs
+## Testing Higher-Order Components
