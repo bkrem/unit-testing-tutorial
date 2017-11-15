@@ -12,8 +12,6 @@
 * `renderedComponent.find()`
 * DRY: `setup()`
 
-## Testing Objects/Maps
-
 ## Testing event handlers
 
 ## Testing Lifecycle events

@@ -13,7 +13,11 @@ const Steak = styled.li`
 `
 const FridayLunch = (props) => (
   <LaBuvette>
-    <ul>{props.portalTeam.map(member => <Steak key={member.name} owner={member.name}>{member.name}</Steak>)}</ul>
+    <ul className="quandoo-table">
+    {
+      props.portalTeam.map(member => <Steak key={member.name} owner={member.name}>{member.name}</Steak>)
+    }
+    </ul>
   </LaBuvette>
 );
 
@@ -32,6 +36,11 @@ describe('FridayLunch', () => {
   it('renders LaBuvette', () => {
     const renderedComponent = shallow(<FridayLunch {...props} />);
     expect(renderedComponent.find(LaBuvette).length).toBe(1);
+  })
+
+  it('has a .quandoo-table', () => {
+   const renderedComponent = shallow(<FridayLunch {...props} />); 
+   expect(renderedComponent.find('.quandoo-table').length).toBe(1);
   })
 
   describe('FridayLunch (with setup func)', () => {
