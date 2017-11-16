@@ -17,7 +17,7 @@
 
 ## Mocking modules
 `mocking.test.js`
-q
+
 ## Mounting / Testing Lifecycle events
 `lifecycle.test.js`
 
