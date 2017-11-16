@@ -22,3 +22,7 @@
 `lifecycle.test.js`
 
 ## Testing Higher-Order Components
+
+## Future
+* Testing mock-heavy containers
+* Testing sagas (i.e. async/generator functions)
