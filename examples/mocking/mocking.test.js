@@ -9,16 +9,15 @@ jest.mock('./networkModule', () => ({
   })
 }))
 
-/**
- jest.mock('gsap', () => ({
-  TweenLite: {
-    set: jest.fn(),
-    to: jest.fn(() => ({
-      eventCallback: () => {},
-    })),
-  },
-}));
- */
+
+//  jest.mock('gsap', () => ({
+//   TweenLite: {
+//     set: jest.fn(),
+//     to: jest.fn(() => ({
+//       eventCallback: () => {},
+//     })),
+//   },
+// }));
 
 describe('Component with mocks', () => {
   it('renders', () => {

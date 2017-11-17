@@ -22,25 +22,29 @@ const FridayLunch = (props) => (
 );
 
 describe('FridayLunch', () => {
-  const props = { 
-    portalTeam: [
-      { name: 'Tobi' }, 
-      { name: 'Antonella' }, 
-      { name: 'Arpad' }, 
-      { name: 'Evzen' }, 
-      { name: 'Carlos' }, 
-      { name: 'Ben' }
-    ] 
-  }
+  let props = {}
+  beforeEach(() => {
+    props = {
+      portalTeam: [
+        { name: 'Tobi' },
+        { name: 'Antonella' },
+        { name: 'Arpad' },
+        { name: 'Evzen' },
+        { name: 'Carlos' },
+        { name: 'Ben' }
+      ]
+    }
+  })
 
   it('renders LaBuvette', () => {
     const renderedComponent = shallow(<FridayLunch {...props} />);
+    props.portalTeam[0].name = 'tnass';
     expect(renderedComponent.find(LaBuvette).length).toBe(1);
   })
 
   it('has a .quandoo-table', () => {
-   const renderedComponent = shallow(<FridayLunch {...props} />); 
-   expect(renderedComponent.find('.quandoo-table').length).toBe(1);
+   const renderedComponent = shallow(<FridayLunch {...props} />);
+   expect(renderedComponent.find('ul').length).toBe(1);
   })
 
   describe('FridayLunch (with setup func)', () => {
@@ -68,6 +72,7 @@ describe('FridayLunch', () => {
         ]
       }
       const renderedComponent = setup(props) // <-- so much cleaner ✨
+      expect(renderedComponent.props().portalTeam).toEqual(expect.objectContaining({name: 'Arpad'}))
       expect(renderedComponent.find(Steak).length).toBe(props.portalTeam.length)
     })
 

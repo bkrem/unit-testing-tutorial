@@ -18,6 +18,7 @@ class LifecycleComponent extends React.PureComponent {
     console.log('did mount')
   }
 
+
   render() {
     return (
       <div></div>
@@ -28,7 +29,8 @@ class LifecycleComponent extends React.PureComponent {
 describe('LifecycleComponent', () => {
   jest.spyOn(LifecycleComponent.prototype, 'componentWillMount');
   jest.spyOn(LifecycleComponent.prototype, 'componentDidMount');
-  
+
+  afterEach(() => jest.clearAllMocks())
 
   it('calls its lifecycle methods when rendered with `mount`', () => {
     const mountedComponent = mount(<LifecycleComponent />)
