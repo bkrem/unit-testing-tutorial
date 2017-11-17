@@ -1,4 +1,4 @@
-# Unit Testing Tutorial
+# Quandoo Unit Testing Tutorial
 
 ## Enzyme basics
 * render types
