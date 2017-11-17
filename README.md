@@ -23,6 +23,10 @@
 
 ## Testing Higher-Order Components
 
+## Gotchas
+* Object comparison, `toEqual` + `expect.objectContaining`, not `toBe`
+* If spying on prototype object (or in doubt), `jest.clearAllMocks()` between each test
+
 ## Future
 * Testing mock-heavy containers
 * Testing sagas (i.e. async/generator functions)
